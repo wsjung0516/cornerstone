@@ -16,3 +16,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 
 WIP 20190629
+getting errors:
+a.) then promise error
+b.) TypeError: Cannot read property 'name' of null
+c.) loadImageFromImageLoader: no image loader for imageId
