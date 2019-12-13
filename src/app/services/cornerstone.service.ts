@@ -13,8 +13,13 @@ export class CornerstoneService {
 
   constructor() {
 
+    cornerstoneWADOImageLoader.external.cornerstone = cornerstone;
 
     cornerstoneWADOImageLoader.webWorkerManager.initialize({
+      maxWebWorkers: navigator.hardwareConcurrency || 1,
+      startWebWorkersOnDemand : true,
+
+      // webWorkerPath : '/node_modules/cornerstone-wado-image-loader/dist/cornerstoneWADOImageLoaderWebWorker.js',
       webWorkerPath : '/assets/cornerstone/webworkers/cornerstoneWADOImageLoaderWebWorker.js',
       taskConfiguration: {
         'decodeTask' : {
@@ -26,7 +31,7 @@ export class CornerstoneService {
   }
 
   fetchDicomImage(url: string): Observable<any> {
-    console.log(`fetching ${url}`)
+    // console.log(`fetching ${url}`)
     return from(cornerstone.loadAndCacheImage(`wadouri:${url}`)).pipe(first());
 
   }
