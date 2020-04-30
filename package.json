@@ -30,7 +30,7 @@
     "cornerstone-tools": "^4.9.0",
     "cornerstone-wado-image-loader": "^3.0.6",
     "dicom-parser": "^1.8.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
     "zone.js": "^0.10.2"
